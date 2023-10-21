@@ -10,161 +10,128 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap"
-        rel="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap" rel="stylesheet.css">
     <style>
         body {
-            margin: 0;
-            background-color: #EFEBE0;
-            font-family: 'Montagu Slab', serif;
+        margin: 0;
+        background-color: #EFEBE0;
+        font-family: 'Montagu Slab', serif;
         }
-
-        .headline {
-            margin: 2px;
-            text-align: right;
-            font-size: 19px;
-            color: #303B2E;
+        
+        .headline{
+        margin : 2px;
+        text-align: right;
+        font-size: 19px;
+        color: #303B2E;
         }
 
         #navbar {
-            background-color: #303B2E;
-            position: fixed;
-            top: -50px;
-            width: 100%;
-            display: block;
-            transition: top 0.3s;
+        background-color: #303B2E;
+        position: fixed;
+        top: -50px;
+        width: 100%;
+        display: block;
+        transition: top 0.3s;
         }
 
         #navbar a {
-            float: left;
-            display: block;
-            color: #EFEBE0;
-            text-align: left;
-            padding: 15px;
-            text-decoration: none;
-            font-size: 17px;
+        float: left;
+        display: block;
+        color: #EFEBE0;
+        text-align: left;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 17px;
         }
 
         #navbar a:hover {
-            background-color: #EFEBE0;
-            color: #303B2E;
+        background-color: #EFEBE0;
+        color: #303B2E;
+        }
+        ava {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50ox;
+        width: 70%;
         }
     </style>
-        <script>
-            function validateForm()
-            {
-                var nrp = document.getElementById("nrp");
-                var msg = document.getElementById("msg");
-                //cek hanya yg invalid
-                if(nrp.value == "") {
-                    nrp.focus();
-                    nrp.placeholder = "contoh : 5026221108"
-                    alert("nrp harus diisi!");
-                    return false;
-                }
-                //harus 10 digit, selain 10 invalid
-                if(nrp.value.length != 10){
-                    nrp.focus();
-                    alert("NRP harus 10 digit, Anda memasukkan " + nrp.value.length + " digit");
-                    return false;
-                }
     
-                // ada huruf, invalid
-                if(isNaN(nrp.value) == true) // true kalo ada unsur abjad, false kalo angka semua
-                {
-                    nrp.focus();
-                    msg.innerHTML = "NRP harus angka!"; // innerHTML mengubah tulisan di dalam tag (kalo gmw pake alert jg)
-                    return false;
-                }
-            }
-        </script>
-
 </head>
 
 <body>
     <div class="bg-light"></div>
-    <div class="container">
-        <div class="row">
-            <div id="headline" class="col">
-                Vania's Portofolio
+        <div class="container">
+            <div class="row">
+                <div id="headline" class="col">
+                    Vania's Portofolio
+                </div>
+                <div id="navbar">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#edu">Education</a>
+                    <a href="#specialization">Specialization</a>
+                    <a href="#contact">Contact</a>
+                  </div>
             </div>
-            <div id="navbar">
-                <a href="#home">Home</a>
-                <a href="#news">About</a>
-                <a href="#edu">Education</a>
-                <a href="#specialization">Specialization</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div style="padding:15px 15px 15px;font-size:30px">
-            <div class="container">
-                <div row>
-                    <div class="col-6 pt-5" id="#home">
-                        <h1><b>Hi, Welcome to my Portofolio Page!</b></h1>
-                        <p>My name is Vania Aileen, call me Vania. I'm 20 year-old student, currently studying
-                            Information System at ITS Surabaya</p>
-                    </div>
-                    <div class="col-6 pt-5">
-                        <div class="col">
-                            <div class="col-12">
-                                INI TEMPAT AVA
+            <div style="padding:15px 15px 2500px;font-size:30px">
+                <div class="container" id="#home">
+                    <div class="row">
+                        <div class="col-6 pt-5">
+                            <h1><b>Hi, Welcome to my Portofolio Page!</b></h1>
+                            <p>My name is Vania Aileen, call me Vania. I'm 20 year-old student, currently studying Information Systems at ITS Surabaya</p>
+                        </div>
+                        <div class="col-6 pt-5">
+                            <div class="w-100 align-self-end">
+                            <img src="ava ets.png" alt="profile" width="150px" class="ava" style="margin: 70 px; ">
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container" id="#edu">
-                <div class="col-7">
-                    <h2><b>studies.</b></h2>
-                    <p></p>
+                <div class="container" id="#about" style="margin: 10px;">
+                    <div class="row" style="background-color: #303B2E;  margin: 20px;">
+                        <div class="col-7" style="color: #EFEBE0;">
+                            <p>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</p>
+                        </div>
+                        <div class="col-5" style="color: #EFEBE0;">
+                            <h1>About me!</h1>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-5">
-                    <p>cok ini knp si kok kiri semuaaaaaaaaa</p>
-                    <p>Scroll to the top to hide the navbar.</p>
-                    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="container" id="#edu" style="margin: 10px;">
+                    <div class="row" style="background-color:#EFEBE0;  margin: 20px;">
+                        <div class="col-7" style="color:#303B2E ;">
+                            <p>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</p>
+                        </div>
+                        <div class="col-5" style="color: #303B2E;">
+                            <div class="container">
+                                <h2>Stretched Link in Card</h2>
+                                <p>Add the .stretched-link class to a link inside the card, and it will make the whole card clickable (the card will act as a link):</p>
+                                <div class="card" style="width:400px">
+                                  <img class="card-img-top" src="sisfor.jpg" alt="Card image" style="width:100%">
+                                  <div class="card-body">
+                                    <h4 class="card-title">Information Systems</h4>
+                                    <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                                    <a href="https://www.its.ac.id/si/" class="btn btn-primary stretched-link">See Profile</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <script>
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-50px";
-            }
-        }
-        <div class="container">
-        <div class="jumbotron">Form Validasi adalah mencegah perngiriman data ke server jika ada yang invalid/tidak
-            sesuai constraint database</div>
         <script>
-            function validate() {
-                console.log("baris 22");
-                return false;
-                console.log("baris 24");
-                return true;
-                console.log("baris 26");
-                return false;
-            }
+            window.onscroll = function() {scrollFunction()};
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-50px";
+                }
+                }
         </script>
-        <form action="https://google.com" method="get" onsubmit="return validateForm();">
-            <div class="form-group">
-                <label for="nrp">NRP :</label>
-                <input type="text" class="form-control" id="nrp">
-            </div>
-            <input type="submit" value="DAFTAR" class="btn btn-primary">
-            <input type="reset" value="ULANGI" class="btn btn-warning">
-        </form>
-    </div>
-    </script>
-    
 </body>
 
 </html>
