@@ -16,18 +16,16 @@
             var nama = document.getElementById("nama");
             var msg = document.getElementById("msg");
 
-            //harus 10 digit, selain 10 invalid
-            if (kontak.value.length != 13) {
+            if (kontak.value.length <13) {
                 kontak.focus();
-                kontak.placeholder = "contoh : 085815510500"
+                kontak.placeholder = "contoh : 085815510500";
                 return false;
             }
 
-            // ada huruf, invalid
-            if (isNaN(kontak.value) == true) // true kalo ada unsur abjad, false kalo angka semua
+            if (isNaN(kontak.value) == true) 
             {
                 kontak.focus();
-                msg.innerHTML = "kontak harus nomor HP yang valid"; // innerHTML mengubah tulisan di dalam tag (kalo gmw pake alert jg)
+                msg.innerHTML = "kontak harus nomor HP yang valid";
                 return false;
             }
         }
